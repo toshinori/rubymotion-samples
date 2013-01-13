@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project'
+
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.name = 'ToSnakeCase'
+
+
+  app.file_dependencies 'app/ns_object.rb.rb' => 'app/ns_string.rb'
+  app.file_dependencies 'app/app_delegate.rb' => 'app/ns_object.rb'
+end
